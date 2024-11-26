@@ -1,0 +1,58 @@
+.header {
+    height: calc(100vh - 68px);
+    min-height: fit-content;
+    padding: 1.5rem;
+    /* Full height for the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282c34;
+    /* Background color (customize as needed) */
+    color: white;
+    /* Text color */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.header-text {
+    flex: 1;
+    /* Take up equal space as the animation */
+    max-width: 50%;
+    /* Ensure the text doesn't overflow */
+}
+
+.header-animation {
+    flex: 1;
+    /* Take up equal space as the text */
+    max-width: 50%;
+    /* Ensure the animation fits well */
+    text-align: center;
+}
+
+.header-animation lottie-player {
+    width: 100%;
+    max-width: 400px;
+    /* Adjust the size of the animation */
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        /* Stack text and animation vertically on smaller screens */
+    }
+
+    .header-text,
+    .header-animation {
+        max-width: 100%;
+    }
+
+    .header-animation {
+        margin-top: 20px;
+    }
+}

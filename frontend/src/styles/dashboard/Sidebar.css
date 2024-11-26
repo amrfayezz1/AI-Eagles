@@ -1,0 +1,82 @@
+.dashboard-sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: #495057;
+    border-bottom: 1px solid #6c757d;
+    position: relative;
+    height: 71px;
+}
+
+.sidebar-logo {
+    font-weight: bold;
+}
+
+.sidebar-logo div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: fit-content;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #495057;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-list {
+    flex-grow: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    cursor: pointer;
+    color: white;
+    gap: 16px;
+    height: 44px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+    background-color: #6c757d;
+}
+
+.sidebar-item .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.sidebar-item .text {
+    display: none;
+    font-size: 1rem;
+}
+
+.dashboard-sidebar.expanded .sidebar-item .text {
+    display: inline-block;
+}

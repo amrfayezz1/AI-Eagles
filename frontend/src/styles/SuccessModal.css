@@ -1,0 +1,9 @@
+.modal-content {
+  background-color: #198754;
+  color: white;
+  border-radius: 10px;
+}
+
+.modal .img-fluid {
+  max-width: 150px;
+}

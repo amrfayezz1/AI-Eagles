@@ -1,0 +1,91 @@
+/* Ensure pills have equal width and align with the design */
+.services .row {
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+.nav-pills .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    /* Equal width for all pills */
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: left;
+    color: #198754;
+    /* Align icon and text */
+}
+
+.nav-pills .nav-link i {
+    font-size: 1.25rem;
+    /* Icon size */
+    color: #198754;
+    /* Icon color */
+}
+
+.services .nav-pills .nav-link.active {
+    background-color: #198754;
+    color: white;
+    border-color: #198754;
+}
+
+.nav-pills .nav-link.active i {
+    color: white;
+    /* Icon color when active */
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+    color: #198754;
+    /* Slight slide effect on hover */
+}
+
+.services h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.services p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .nav-pills {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 16px;
+        overflow: hidden;
+    }
+
+    .services .row {
+        flex-direction: column;
+    }
+
+    .nav-pills .nav-link {
+        flex: 1 0 auto;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Move content down slightly */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    /* Reset position */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}

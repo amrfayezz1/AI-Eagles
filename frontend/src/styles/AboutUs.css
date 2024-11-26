@@ -1,0 +1,14 @@
+.about h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about .lead {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about img {
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    border-radius: 15px;
+}
